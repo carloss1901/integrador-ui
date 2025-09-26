@@ -1,0 +1,127 @@
+$color-active-row: #ebf5f9; //#ffcdd2
+$color-hover-row: #ebf5f9; //#ffebee
+$spacio-separacion: 1.125rem;
+
+.rounded-top-0 {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.nl {
+	.nav-tabs {
+		@extend .border-bottom;
+	}
+}
+
+.nl .acc-body-padding-0 {
+	.accordion-body {
+		padding: 0 !important;
+	}
+}
+
+.nl .modal {
+	&-title {
+		font-size: 1.18rem;
+		text-transform: uppercase;
+	}
+
+	&-footer {
+		padding: 1rem;
+
+		.btn {
+			margin: 0;
+
+			&:not(:last-child) {
+				margin-right: 0.5rem;
+			}
+		}
+	}
+}
+
+// .fidt {
+// 	ngb-accordion {
+// 		.accordion-body {
+// 			padding: 1rem !important;
+// 		}
+
+// 		.accordion-header .accordion-button {
+// 			padding: 1rem !important;
+// 		}
+
+// 		.title {
+// 			text-transform: uppercase;
+// 		}
+// 	}
+
+// 	ngb-accordion.body-p-0 {
+// 		.accordion-body {
+// 			padding: 0 !important;
+// 		}
+// 	}
+
+// 	ng-select {
+// 		.ng-placeholder {
+// 			text-transform: uppercase !important;
+// 		}
+// 	}
+
+// 	input.form-control::placeholder {
+// 		text-transform: uppercase !important;
+// 	}
+
+// 	.required {
+// 		label::after {
+// 			position: absolute;
+// 		}
+// 	}
+
+// 	.form-check-input:not(:checked) {
+// 		border-color: #bdbdbd;
+// 		background-color: #f5f5f5;
+// 	}
+
+// 	.form-icon {
+// 		background-image: url("//apps2desa.mineco.gob.pe/nsrtmheader/assets/images/icon-search.svg");
+
+// 		&.calendar {
+// 			background-image: url("//apps2desa.mineco.gob.pe/nsrtmheader/assets/images/icon-calendar.svg");
+// 		}
+
+// 		&.search {
+// 			background-image: url("//apps2desa.mineco.gob.pe/nsrtmheader/assets/images/icon-search.svg");
+// 		}
+// 	}
+
+// 	.pagination .page-item.disabled .page-link {
+// 		background-color: transparent !important;
+// 	}
+
+// 	.pagination .page-link {
+// 		padding-right: 0.5rem !important;
+// 		padding-left: 0.5rem !important;
+// 	}
+
+// 	.dropdown-toggle.btn-icon::after {
+// 		display: none;
+// 	}
+
+// 	.nav-tabs li {
+// 		min-width: auto;
+// 	}
+
+// 	.alert-dismissible .btn-close {
+// 		padding: 0 0 0 0;
+// 		font-size: 10px;
+// 		width: 20px;
+// 		height: 20px;
+// 		top: 1px;
+// 	}
+// }
+
+.no-click {
+	pointer-events: none;
+}
+
+.z-index-1 {
+	z-index: 1;
+}

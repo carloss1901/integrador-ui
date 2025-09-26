@@ -1,0 +1,23 @@
+#agrihusaApp {
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.agrihusaApp-content-container {
+	display: flex;
+	flex: 1;
+}
+
+.agrihusaApp-content_sidebar {
+	height: calc(100vh - 54px);
+	min-width: 320px;
+	background-color: #606062;
+}
+
+.agrihusaApp-content_main {
+	height: calc(100vh - 54px);
+	flex-grow: 1;
+	overflow-y: auto;
+}

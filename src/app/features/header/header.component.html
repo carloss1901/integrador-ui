@@ -1,0 +1,68 @@
+<div class="header_container-fluid px-0 py-0">
+	<div class="header_container-fluid-div row g-0 m-0 d-flex justify-content-between align-items-center">
+		<!--logo-->
+		<div class="header-container-left col-auto d-flex align-items-center">
+			<!--boton para hacer toggle al menu-->
+			<div class="header-navbar-button px-2">
+				<button class="navbar-toggler text-white" type="button">
+					<span class="feather icon-menu" style="font-size: 17px;"></span>
+				</button>
+			</div>
+
+			<!-- logo -->
+			<div class="agrihusa-header__title">
+				<a [href]="" class="link-to-landing">AGRIHUSA</a>
+			</div>
+		
+			<!-- combo seleccionar rol-->
+			<div class="header-combo">
+				<div class="row mx-0 my-0">
+					<div class="col-12 px-3">
+						<label class="header-combo-label" for="rolId">ROL</label>
+						<ng-select
+							class="text-uppercase header-ng-select"
+							placeholder="(Seleccione rol)"
+							bindLabel="nombreRol"
+							bindValue="rolId"
+							[searchable]="false"
+							[clearable]="false"
+						></ng-select>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="header-container-right col-auto">
+			<div class="header-dropdown-toggle d-flex no-dropdown" role="button" aria-expanded="true">
+				<div class="text-white me-3">
+					<div id="dropdownUser" class="text-end d-flex align-items-center" onclick="javascript:toggleSlide();">
+						<div class="me-2">
+							<h6 class="mb-0 fw-bold header-container-right-username">
+								U8SD4 - RONALD GIMENEZ
+							</h6>
+							<h6 class="mb-0 header-container-right-address">
+								20/20/2025
+							</h6>
+						</div>
+						<div>
+							<span class="feather icon-chevron-down" style="font-size: 18px;"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="ariaDropdownUser" aria-labelledby="dropdownUser" class="dropdown-menu dropdown-menu-settings dropdown-menu-right mt-0 me-3" data-bs-popper="static">
+				<div>
+					<a class="dropdown-item">
+						<div class="d-flex align-items-center">
+							<span class="box_icon box_icon_sm">
+								<span class="feather heading-h6 icon-arrow-right-circle icon-md p-0"></span>
+							</span>
+							<span class="item">Cerrar sesión</span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
