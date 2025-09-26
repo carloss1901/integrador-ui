@@ -5,10 +5,18 @@ import { FormsModule } from '@angular/forms';
 import '@angular/common/locales/global/es-PE';
 import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
+import { AgrihusaBreadcrumbComponent } from './components/agrihusa-breadcrumb/agrihusa-breadcrumb.component';
+import { AgrihusaTopBarComponent } from './components/agrihusa-topbar/agrihusa-topbar.component';
+import { AgrihusaNoResultsComponent } from './components/agrihusa-no-result/agrihusa-no-results.component';
+import { AgrihusaLoadingComponent } from './components/agrihusa-loading/agrihusa-loading.component';
 
 // services
 @NgModule({
 	declarations: [
+		AgrihusaBreadcrumbComponent,
+		AgrihusaTopBarComponent,
+		AgrihusaNoResultsComponent,
+		AgrihusaLoadingComponent
 	],
 	imports: [
 		NgSelectModule,
@@ -18,6 +26,10 @@ import { RouterModule } from '@angular/router';
 		RouterModule
 	],
 	exports: [
+		AgrihusaBreadcrumbComponent,
+		AgrihusaTopBarComponent,
+		AgrihusaNoResultsComponent,
+		AgrihusaLoadingComponent
 	],
 	providers: [
 		{ provide: LOCALE_ID, useValue: 'es-PE' },

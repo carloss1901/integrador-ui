@@ -1,0 +1,40 @@
+<div 
+    class="table-responsive"
+    [ngClass]="{ 'table-sticky table-sticky--height': datasource.length > 10 }"
+>
+    <div class="p-content d-flex justify-content-between align-items-center">
+        <div class="title-group-uppercase">LISTADO DE ESTADOS DE DESPACHO</div>
+    </div>
+
+    <table class="table tbl-grid m-0 head-no-rounded">
+        <caption class="d-none">
+            Tabla mantenimiento de estados de despacho
+        </caption>
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Fecha creación</th>
+                <th scope="col">Últ. modificación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Prueba</td>
+                <td>Activo</td>
+                <td>11/10/2025</td>
+                <td>01/11/2025</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ng-container *ngIf="!loading && !totalItems">
+        <agrihusa-no-results></agrihusa-no-results>
+    </ng-container>
+
+    <ng-container *ngIf="loading">
+        <agrihusa-loading></agrihusa-loading>
+    </ng-container>
+</div>

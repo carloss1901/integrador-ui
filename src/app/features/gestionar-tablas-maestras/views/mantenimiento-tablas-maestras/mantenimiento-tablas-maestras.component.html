@@ -1,1 +1,62 @@
-<p>mantenimiento-tablas-maestras works!</p>
+<div class="frame-layout">
+    <div class="frame-layout__header">
+        <!-- <div class="container-fluid px-0 g-0">
+            <div class="row containerIn-divisor">
+                <nav aria-label="breadcrumb">
+                    <agrihusa-breadcrumb
+                        class="breadcrumb"
+                        [breadcrumb]="breadcrumbs"
+                    ></agrihusa-breadcrumb>
+                </nav>
+            </div>
+        </div> -->
+        <!--Titulo del Contenedor Interno-->
+        <div class="row">
+            <div class="col-12 my-2">
+                <agrihusa-topbar
+                    [titulo]="getNombreMantenimiento"
+                    [subtitulo]="'Mantenimiento de tablas maestras'"
+                    [showCancel]="false"
+                ></agrihusa-topbar>
+            </div>
+        </div>
+    </div>
+    <div class="frame-layout__body">
+        <div class="nl-card">
+            <ul
+                ngbNav
+                #nav="ngbNav"
+                class="nav-tabs d-flex flex-nowrap"
+            >
+                <li [ngbNavItem]="1" [destroyOnHide]="true">
+                    <a ngbNavLink placement="bottom">
+                        <span class="feather icon-list icon-md"></span>
+                        <span class="ms-1">Estado despacho</span>
+                    </a>
+                    <ng-template ngbNavContent>
+                        <div class="nl-card mb-component">
+                            <agrihusa-est-despacho-filtros>
+                            </agrihusa-est-despacho-filtros>
+                        </div>
+                        <div class="nl-card">
+                            <agrihusa-tabla-est-despacho>
+                            </agrihusa-tabla-est-despacho>
+                        </div>
+                    </ng-template>
+                </li>
+                <li [ngbNavItem]="2">
+                    <a ngbNavLink placement="bottom">
+                        <span class="feather icon-list icon-md"></span>
+                        <span class="ms-1">Estado documento</span>
+                    </a>
+                    <ng-template ngbNavContent>
+
+                    </ng-template>
+                </li>
+            </ul>
+            <div class="flex-grow-1">
+                <div [ngbNavOutlet]="nav"></div>
+            </div>
+        </div>
+    </div>
+</div>

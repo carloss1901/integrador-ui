@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./mantenimiento-tablas-maestras.component.scss']
 })
 export class MantenimientoTablasMaestrasComponent {
-
+	getNombreMantenimiento = "Mantenimiento de Tablas Maestras";
 }

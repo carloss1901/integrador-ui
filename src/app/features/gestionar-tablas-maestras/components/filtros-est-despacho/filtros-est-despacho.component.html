@@ -1,0 +1,37 @@
+<ng-container>
+    <ngb-accordion
+        #acc="ngbAccordion"
+        activeIds="ngb-panel-filtro"
+    >
+        <ngb-panel id="ngb-panel-filtro">
+            <ng-template ngbPanelTitle>
+                <span class="title-group-uppercase">Filtros de búsqueda</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+                <form [formGroup]="frmFiltro">
+                    <div class="container-fluid px-0">
+                        <div class="row gx-3 align-items-baseline mb-2">
+                            <div class="col-5">
+                                <div class="form-group">
+                                    <label class="form-label">Descripción:</label>
+                                    <input
+                                        class="form-control"
+                                        formControlName="txtDescripcion"
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="form-group">
+                                    <label class="form-label">Estado:</label>
+                                    <ng-select
+                                        formControlName="cboEstado"
+                                    ></ng-select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
+</ng-container>
