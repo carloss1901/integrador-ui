@@ -10,18 +10,22 @@ import { NgBootstrapModule } from './bootstrap/bootstrap.module';
 import { SharedModule } from './shared/shared.module';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './features/header/header.component';
+import { AlertaComponent } from './shared/components/alert/alert.component';
+import { HttpClientModule } from '@angular/common/http';
 
 registerLocaleData(esPE);
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    AlertaComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     NgBootstrapModule,
     SharedModule,

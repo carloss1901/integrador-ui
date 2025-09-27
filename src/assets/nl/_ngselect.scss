@@ -47,7 +47,7 @@
 		}
 		&.ng-select-focused:not(.ng-select-opened) > .ng-select-container {
 			border: 1px solid $nl-green;
-			box-shadow: 0 0 0 3px $nl-green-ligth;
+			box-shadow: 0 0 0 3px $nl-green-light;
 		}
 		&.ng-invalid {
 			.ng-select-container {

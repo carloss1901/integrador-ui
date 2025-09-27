@@ -9,7 +9,6 @@ import { RequestBuilder } from '../request-builder';
 import { Observable } from 'rxjs';
 import { map, filter } from 'rxjs/operators';
 
-import { CustomPageEstadoDespachoProjection } from '../models/custom-page-estado-despacho-projection';
 import { DesactivarEstDespachoRequest } from '../models/desactivar-est-despacho-request';
 import { EstadoDespachoProjection } from '../models/estado-despacho-projection';
 import { RegistrarEstDespachoRequest } from '../models/registrar-est-despacho-request';
@@ -31,6 +30,10 @@ export class EstadoDespachoControllerService extends BaseService {
   static readonly RegistrarEstDespachoPath = '/estado-despacho/registrar';
 
   /**
+   * Registrar y editar estados de despacho.
+   *
+   * Registrar y editar estados de despacho
+   *
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
    * To access only the response body, use `registrarEstDespacho()` instead.
    *
@@ -40,8 +43,7 @@ export class EstadoDespachoControllerService extends BaseService {
     context?: HttpContext
     body: RegistrarEstDespachoRequest
   }
-): Observable<StrictHttpResponse<{
-}>> {
+): Observable<StrictHttpResponse<string>> {
 
     const rb = new RequestBuilder(this.rootUrl, EstadoDespachoControllerService.RegistrarEstDespachoPath, 'post');
     if (params) {
@@ -55,13 +57,16 @@ export class EstadoDespachoControllerService extends BaseService {
     })).pipe(
       filter((r: any) => r instanceof HttpResponse),
       map((r: HttpResponse<any>) => {
-        return r as StrictHttpResponse<{
-        }>;
+        return r as StrictHttpResponse<string>;
       })
     );
   }
 
   /**
+   * Registrar y editar estados de despacho.
+   *
+   * Registrar y editar estados de despacho
+   *
    * This method provides access to only to the response body.
    * To access the full response (for headers, for example), `registrarEstDespacho$Response()` instead.
    *
@@ -71,13 +76,10 @@ export class EstadoDespachoControllerService extends BaseService {
     context?: HttpContext
     body: RegistrarEstDespachoRequest
   }
-): Observable<{
-}> {
+): Observable<string> {
 
     return this.registrarEstDespacho$Response(params).pipe(
-      map((r: StrictHttpResponse<{
-}>) => r.body as {
-})
+      map((r: StrictHttpResponse<string>) => r.body as string)
     );
   }
 
@@ -138,6 +140,10 @@ export class EstadoDespachoControllerService extends BaseService {
   static readonly ListarEstDespachoPath = '/estado-despacho/listar';
 
   /**
+   * Listar estados de despacho.
+   *
+   * Listar estados de despacho
+   *
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
    * To access only the response body, use `listarEstDespacho()` instead.
    *
@@ -148,7 +154,7 @@ export class EstadoDespachoControllerService extends BaseService {
     size?: number;
     context?: HttpContext
   }
-): Observable<StrictHttpResponse<CustomPageEstadoDespachoProjection>> {
+): Observable<StrictHttpResponse<Array<EstadoDespachoProjection>>> {
 
     const rb = new RequestBuilder(this.rootUrl, EstadoDespachoControllerService.ListarEstDespachoPath, 'get');
     if (params) {
@@ -163,12 +169,16 @@ export class EstadoDespachoControllerService extends BaseService {
     })).pipe(
       filter((r: any) => r instanceof HttpResponse),
       map((r: HttpResponse<any>) => {
-        return r as StrictHttpResponse<CustomPageEstadoDespachoProjection>;
+        return r as StrictHttpResponse<Array<EstadoDespachoProjection>>;
       })
     );
   }
 
   /**
+   * Listar estados de despacho.
+   *
+   * Listar estados de despacho
+   *
    * This method provides access to only to the response body.
    * To access the full response (for headers, for example), `listarEstDespacho$Response()` instead.
    *
@@ -179,10 +189,10 @@ export class EstadoDespachoControllerService extends BaseService {
     size?: number;
     context?: HttpContext
   }
-): Observable<CustomPageEstadoDespachoProjection> {
+): Observable<Array<EstadoDespachoProjection>> {
 
     return this.listarEstDespacho$Response(params).pipe(
-      map((r: StrictHttpResponse<CustomPageEstadoDespachoProjection>) => r.body as CustomPageEstadoDespachoProjection)
+      map((r: StrictHttpResponse<Array<EstadoDespachoProjection>>) => r.body as Array<EstadoDespachoProjection>)
     );
   }
 
@@ -192,6 +202,10 @@ export class EstadoDespachoControllerService extends BaseService {
   static readonly DesactivarEstDespachoPath = '/estado-despacho/desactivar';
 
   /**
+   * Registrar y editar estados de despacho.
+   *
+   * Registrar y editar estados de despacho
+   *
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
    * To access only the response body, use `desactivarEstDespacho()` instead.
    *
@@ -201,8 +215,7 @@ export class EstadoDespachoControllerService extends BaseService {
     context?: HttpContext
     body: DesactivarEstDespachoRequest
   }
-): Observable<StrictHttpResponse<{
-}>> {
+): Observable<StrictHttpResponse<string>> {
 
     const rb = new RequestBuilder(this.rootUrl, EstadoDespachoControllerService.DesactivarEstDespachoPath, 'delete');
     if (params) {
@@ -216,13 +229,16 @@ export class EstadoDespachoControllerService extends BaseService {
     })).pipe(
       filter((r: any) => r instanceof HttpResponse),
       map((r: HttpResponse<any>) => {
-        return r as StrictHttpResponse<{
-        }>;
+        return r as StrictHttpResponse<string>;
       })
     );
   }
 
   /**
+   * Registrar y editar estados de despacho.
+   *
+   * Registrar y editar estados de despacho
+   *
    * This method provides access to only to the response body.
    * To access the full response (for headers, for example), `desactivarEstDespacho$Response()` instead.
    *
@@ -232,13 +248,10 @@ export class EstadoDespachoControllerService extends BaseService {
     context?: HttpContext
     body: DesactivarEstDespachoRequest
   }
-): Observable<{
-}> {
+): Observable<string> {
 
     return this.desactivarEstDespacho$Response(params).pipe(
-      map((r: StrictHttpResponse<{
-}>) => r.body as {
-})
+      map((r: StrictHttpResponse<string>) => r.body as string)
     );
   }
 

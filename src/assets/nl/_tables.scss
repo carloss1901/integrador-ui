@@ -8,16 +8,12 @@
 		padding-left: 1rem !important;
 		padding-right: 1rem !important;
 	}
-
 	.table-sticky {
 		height: 200px;
-
 		&.table-sticky--height {
-			height: 350px;
+			height: 440px;
 		}
-
 		overflow-y: auto;
-
 		thead {
 			th {
 				top: 0;
@@ -26,7 +22,6 @@
 			}
 		}
 	}
-
 	.table {
 		&.table-consult {
 			tbody>tr {
@@ -36,7 +31,6 @@
 				}
 			}
 		}
-
 		thead {
 			th {
 				height: 48px;
@@ -50,24 +44,19 @@
 				line-height: 2;
 			}
 		}
-
-		tbody>tr {
+		tbody > tr {
 			cursor: pointer;
-
 			&:hover {
-				//color: $dgpmi-primary; //$nl-red;
+				//color: $dgpmi-primary !important; //$nl-red;
 				background: $active-row; //$nl-red-ligth;
 			}
-
 			&.active {
 				background: $dgpmi-primary-light; //$nl-red-ligth;
-
-				>td {
+				> td {
 					color: $dgpmi-primary; //$nl-red;
 				}
 			}
 		}
-
 		td,
 		th {
 			vertical-align: middle;
@@ -78,16 +67,13 @@
 				text-align: right !important;
 			}
 		}
-
 		&.table-sm {
-
 			td,
 			th {
 				height: auto;
 				padding: 0.2rem 0.25rem !important;
 			}
 		}
-
 		&.table-consulta {
 			tbody>tr {
 				cursor: inherit;
@@ -100,6 +86,9 @@
 		}
 	}
 
+	.table > :not(caption) > * > * {
+		background-color: transparent;
+	}
 
 	.no-results {
 		padding: 2rem 1.5rem;

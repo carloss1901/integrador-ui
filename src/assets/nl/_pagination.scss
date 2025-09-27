@@ -18,7 +18,9 @@
 		.page-item {
 			&.disabled {
 				.page-link { 
+					background-color: transparent;
 					color: $nl-grey-20;
+					cursor: not-allowed;
 				}
 			}
 		}

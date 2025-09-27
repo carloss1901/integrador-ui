@@ -31,7 +31,7 @@
     &.labels-aprobado {
         color: $nl-green;
         border-color: $nl-green;
-        background-color: $nl-green-ligth;
+        background-color: $nl-green-light;
         .labels_circle {
             background-color: $nl-green;
         }
@@ -55,7 +55,7 @@
     &.labels-descartado {
         color: $nl-orange;
         border-color: $nl-orange;
-        background-color: $nl-orange-ligth;
+        background-color: $nl-orange-light;
         .labels_circle {
             background-color: $nl-orange;
         }
@@ -77,19 +77,19 @@
         }
     }
     &.labels-activo, &.labels-activado {
-        color: $nl-blue;
-        border-color: $nl-blue;
-        background-color: $nl-blue-light;
+        color: $nl-green;
+        border-color: $nl-green;
+        background-color: $nl-green-light;
         .labels_circle {
-            background-color: $nl-blue;
+            background-color: $nl-green;
         }
     }
     &.labels-inactivo, &.labels-desactivado {
-        color: $nl-grey-30;
-        border-color: $nl-grey-20;
-        background-color: $nl-grey-20;
+        color: $nl-red;
+        border-color: $nl-red;
+        background-color: $nl-red-ligth;
         .labels_circle {
-            background-color:$nl-grey-30;
+            background-color:$nl-red;
         }
     }
     &.labels-culminado {

@@ -2,14 +2,8 @@
     class="table-responsive"
     [ngClass]="{ 'table-sticky table-sticky--height': datasource.length > 10 }"
 >
-    <div class="p-content d-flex justify-content-between align-items-center">
-        <div class="title-group-uppercase">LISTADO DE ESTADOS DE DESPACHO</div>
-    </div>
-
     <table class="table tbl-grid m-0 head-no-rounded">
-        <caption class="d-none">
-            Tabla mantenimiento de estados de despacho
-        </caption>
+        <caption class="d-none">Tabla mantenimiento de estados de despacho</caption>
         <thead>
             <tr>
                 <th scope="col">Id</th>
@@ -19,13 +13,31 @@
                 <th scope="col">Últ. modificación</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Prueba</td>
-                <td>Activo</td>
-                <td>11/10/2025</td>
-                <td>01/11/2025</td>
+        <tbody *ngIf="!loading">
+            <tr
+                *ngFor="let item of datasource; index as i"
+                [class]="'c-pointer tbl-row tbl-row-' + i"
+                [ngClass]="{
+                    active: item.idEstadoDespacho === itemId
+                }"
+                (click)="onSeleccionarFila(item)"
+            >
+                <td>{{ item.idEstadoDespacho }}</td>
+                <td>{{ item.descripcion }}</td>
+                <td>
+                    <span
+                        class="labels"
+                        [ngClass]="{
+                            'labels-activo': item.activo === true,
+                            'labels-inactivo': item.activo === false
+                        }"
+                    >
+                        <span class="labels_circle"></span>
+                        <span>{{ item.estadoDsc }}</span>
+                    </span>
+                </td>
+                <td>{{ item.fecCreacion }}</td>
+                <td>{{ item.fecModificacion }}</td>
             </tr>
         </tbody>
     </table>
@@ -38,3 +50,11 @@
         <agrihusa-loading></agrihusa-loading>
     </ng-container>
 </div>
+
+<table-footer-pagination
+    [totalItems]="totalItems"
+    [totalItemsPerPage]="datasource.length"
+    (changePaginate)="onChangePaginate($event)"
+    [page]="page"
+    [pageSize]="pageSize"
+></table-footer-pagination>

@@ -58,7 +58,7 @@
     }
     &-success {
       color: $nl-black;
-      background-color: $nl-green-ligth;
+      background-color: $nl-green-light;
       border-color: $nl-green;
       .feather {
         font-size: 18px;
@@ -76,7 +76,7 @@
     }
     &-warning {
       color: $nl-black;
-      background-color: $nl-orange-ligth;
+      background-color: $nl-orange-light;
       border-color: $nl-orange;
       .feather {
         font-size: 18px;
@@ -108,7 +108,7 @@
   .bg-alert-warning {
     .alert {
       color: $nl-black;
-      background-color: $nl-orange-ligth;
+      background-color: $nl-orange-light;
       border-color: $nl-orange;
       .feather {
         font-size: 18px;
@@ -130,7 +130,7 @@
   .bg-alert-success {
     .alert {
       color: $nl-black;
-      background-color: $nl-green-ligth;
+      background-color: $nl-green-light;
       border-color: $nl-green;
       .feather {
         font-size: 18px;

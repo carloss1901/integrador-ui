@@ -9,6 +9,8 @@ import { AgrihusaBreadcrumbComponent } from './components/agrihusa-breadcrumb/ag
 import { AgrihusaTopBarComponent } from './components/agrihusa-topbar/agrihusa-topbar.component';
 import { AgrihusaNoResultsComponent } from './components/agrihusa-no-result/agrihusa-no-results.component';
 import { AgrihusaLoadingComponent } from './components/agrihusa-loading/agrihusa-loading.component';
+import { TableFooterPaginationComponent } from './components/agrihusa-table-footer/agrihusa-table-footer.component';
+import { AgrihusaButtonComponent } from './components/agrihusa-button/agrihusa-button.component';
 
 // services
 @NgModule({
@@ -16,7 +18,9 @@ import { AgrihusaLoadingComponent } from './components/agrihusa-loading/agrihusa
 		AgrihusaBreadcrumbComponent,
 		AgrihusaTopBarComponent,
 		AgrihusaNoResultsComponent,
-		AgrihusaLoadingComponent
+		AgrihusaLoadingComponent,
+		TableFooterPaginationComponent,
+		AgrihusaButtonComponent
 	],
 	imports: [
 		NgSelectModule,
@@ -29,7 +33,9 @@ import { AgrihusaLoadingComponent } from './components/agrihusa-loading/agrihusa
 		AgrihusaBreadcrumbComponent,
 		AgrihusaTopBarComponent,
 		AgrihusaNoResultsComponent,
-		AgrihusaLoadingComponent
+		AgrihusaLoadingComponent,
+		TableFooterPaginationComponent,
+		AgrihusaButtonComponent
 	],
 	providers: [
 		{ provide: LOCALE_ID, useValue: 'es-PE' },

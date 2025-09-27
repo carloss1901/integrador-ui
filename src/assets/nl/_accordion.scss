@@ -80,6 +80,11 @@
 		padding-top: 1rem !important;
 		padding-bottom: 1rem !important;
 	  }
+
+	  .accordion-button:not(.collapsed) {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
+		color: $nl-red;
+	  }
 	}
   
 	formly-wrapper-form-field {
@@ -87,14 +92,14 @@
 		margin-bottom: 0rem !important;
 	  }
 	}
-  }
+}
 
 .accordion-item {
 	border-color: rgba(0, 0, 0, 0.125); // rgba(63, 63, 63, 0.125);
 }
 
 .accordion-button:not(.collapsed) {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
 	color: $nl-red;
 }
 
